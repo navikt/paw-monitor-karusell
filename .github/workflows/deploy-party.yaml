@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - master
+name: Deploy to party on push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: now --prod --token ${ZEIT_TOKEN}
+      env:
+        ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}

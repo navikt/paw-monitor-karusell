@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="siema.min.js"></script>
+  </head>
+  <body>
+    <div class="images">
+      <img src="https://veientilarbeid.screenshots.nav.party/chrome-full.png" />
+      <img src="https://veientilarbeid.screenshots.nav.party/iphone-6-full.png" />
+      <img src="https://veientilarbeid.screenshots.nav.party/galaxy-s10-full.png" />
+      <img src="https://veientilarbeid.screenshots.nav.party/iphone-x-full.png" />
+      <img src="https://veientilarbeid.screenshots.nav.party/galaxy-s5-full.png" />
+      <img src="https://veientilarbeid.screenshots.nav.party/nexus-10-full.png" />
+      <img src="https://veientilarbeid.screenshots.nav.party/ipad-full.png" />
+    </div>
+    <script>
+      const carousel = new Siema({
+        selector: '.images',
+        loop: true
+      });
+      const next = () => carousel.next()
+      setInterval(next, 5000)
+    </script>
+    <style>
+      body {
+        text-align: center;
+      }
+      img {
+        height: 100%;
+      }
+    </style>
+  </body>
+</html>

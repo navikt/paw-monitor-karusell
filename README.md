@@ -1,6 +1,8 @@
 # paw-monitor-karusell
 
-Bildekarusell som viser skjermbilder fra frontendappene våre
+Bildekarusell som viser skjermbilder fra frontendappene våre.
+
+Visningen ligger på [carousel.paw.nav.party](https://carousel.paw.nav.party/)
 
 ## Utvikling
 

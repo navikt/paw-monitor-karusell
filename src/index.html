@@ -3,7 +3,6 @@
     <script src="siema.min.js"></script>
   </head>
   <body>
-    <button class="next">Neste</button>
     <button class="prev">Forrige</button>
     <div class="images">
       <img src="https://veientilarbeid.screenshots.nav.party/chrome-full.png" />
@@ -14,6 +13,7 @@
       <img src="https://veientilarbeid.screenshots.nav.party/nexus-10-full.png" />
       <img src="https://veientilarbeid.screenshots.nav.party/ipad-full.png" />
     </div>
+    <button class="next">Neste</button>
     <script>
       const carousel = new Siema({
         selector: '.images',
@@ -21,28 +21,30 @@
       });
       const next = () => carousel.next()
       const prev = () => carousel.prev()
-      setInterval(next, 5000)
+      setInterval(next, 300000)
       document.querySelector('.prev').addEventListener('click', () => prev())
       document.querySelector('.next').addEventListener('click', () => next())
     </script>
     <style>
+      body {
+        display: flex;
+        justify-content: space-between;
+      }
       img {
         height: 100%;
       }
       button {
+        width: 200px;
+        height: 100px;
+        cursor: pointer;
         border: 1px solid black;
         background-color: white;
-        padding: 1rem;
-        margin-top: 20rem;
+        text-align: center;
+        font-size: x-large;
+        font-weight: 600;
       }
       .images {
         text-align: center;
-      }
-      .prev {
-        float: left;
-      }
-      .next {
-        float: right;
       }
     </style>
   </body>
